@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* .header {
+	position: relative;
+	display: inline-block;
+	background: lightgrey;
+	Color: rgb(109, 89, 196);
+	padding: 10px;
+	border-radius: 30px;
+	font-size: 2vh;
+	text-shadow: 2px 2px #000000;
+}
+
+.header::before {
+	content: '';
+	height: 100%;
+	display: block;
+	position: absolute;
+	width: 100vw;
+	right: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+.header::after {
+	content: '';
+	height: 100%;
+	display: block;
+	background: linear-gradient(rgba(109, 89, 196, 0.9), rgba(240, 141, 52, 0.5)), no-repeat center/cover;
+	position: absolute;
+	width: 100vw;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -2;
+} */
+
+body {
+	background: repeat center / cover url(bernard-hermant-X-Bu9X6gok0-unsplash.jpg);
+	width: 100vw;
+	height: 100vh;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+
+.container {
+	margin: 2rem;
+	width: 90vw;
+	height: 90vh;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+}
+
+.flipCardContainer {
+	display: block;
+	width: 225px;
+	height: 300px;
+	margin: 5px 10px 0 0;
+	perspective: 900px;
+}
+
+.flipCard {
+	/* position: relative; */
+	width: 100%;
+	height: 100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+.flipCardContainer:hover .flipCard {
+	transform: rotateY(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.flipCardFront {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	background-color: #333;
+	color: #fff;
+}
+
+.flipCardFront h2,
+.flipCardBack h2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 25%;
+}
+
+.flipCardBack {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-evenly; */
+	background-color: #517fa4;
+	color: #fff;
+	transform: rotateY(180deg);
+}
+
+.flipCardBack li {
+	list-style-type: none;
+	margin: 10px;
+}
+
+.flipCardFront img {
+	width: 100%;
+	height: 75%;
+	/* border-radius: 0.5rem; */
+}
+
+.flipCardBack ul {
+	text-align: center;
+}
+
+.nameInCard {
+	font-size: 85%;
+	text-transform: capitalize;
+}
+
+.email {
+	font-size: 10px;
+}
+
+.addressLine1,
+.addressLine2 {
+	font-size: 11px;
+	text-transform: capitalize;
+}
+
+.dob {
+	font-size: 10px;
+}
+
+.custSince {
+	font-size: 10px;
+}
